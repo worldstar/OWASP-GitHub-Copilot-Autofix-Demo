@@ -40,18 +40,35 @@ This repository demonstrates a Node.js application that allows users to:
    git clone https://github.com/your-username/owasp-copilot-autofix-demo.git
    cd owasp-copilot-autofix-demo
 
-2. Build the Docker image:
+2. **Build the Docker image**:
+   ```bash
+   docker build -t owasp-copilot-autofix-demo .
 
-bash
-複製程式碼
-docker build -t owasp-copilot-autofix-demo .
+3. Run the Docker container:
+   ```bash
+   docker run -p 3000:3000 owasp-copilot-autofix-demo
 
-Run the Docker container:
+## Access the application: Open http://localhost:3000 in your browser.
 
-bash
-複製程式碼
-docker run -p 3000:3000 owasp-copilot-autofix-demo
-Access the application: Open http://localhost:3000 in your browser.
-
-Running Locally (Without Docker)
+1. Running Locally (Without Docker)
 Install dependencies:
+   ```bash
+   npm install
+   Start the server:
+
+   ```bash
+   npm start
+Open your browser to http://localhost:3000.
+
+## How to Use
+1. Navigate to the Upload Page (/)
+You’ll see a simple form to upload a ZIP file.
+
+2. Upload & Scan
+Once you upload, the server will unzip your project and simulate scanning for OWASP vulnerabilities.
+
+3. Review & Select Fixes
+On the scan page, you’ll see any detected issues along with suggested fixes. Check the box next to each fix you want to include.
+
+4. Download Revised Code
+After you submit your selections, the server zips the revised files. You can then download the updated ZIP.
