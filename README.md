@@ -21,8 +21,24 @@ This repository demonstrates a Node.js application that allows users to:
 ---
 
 ## Project Structure
-
-. ├── Dockerfile ├── package.json ├── package-lock.json ├── /app │ ├── index.js // Main Express server │ ├── /routes │ │ └── index.js // Routing definitions │ ├── /controllers │ │ └── owaspScanner.js // Placeholder scanning logic │ ├── /views │ │ ├── upload.ejs // Page 1: Upload form │ │ ├── scan.ejs // Page 2: Display scan results & fixes │ │ └── download.ejs // Page 3: Final ZIP download │ └── /public │ └── css │ └── styles.css └── /uploads // Generated uploads & revised ZIPs (created on runtime)
+.
+├── Dockerfile
+├── package.json
+├── package-lock.json
+├── /app
+│   ├── index.js              // Main Express server
+│   ├── /routes
+│   │   └── index.js          // Routing definitions
+│   ├── /controllers
+│   │   └── owaspScanner.js   // Placeholder scanning logic
+│   ├── /views
+│   │   ├── upload.ejs        // Page 1: Upload form
+│   │   ├── scan.ejs          // Page 2: Display scan results & fixes
+│   │   └── download.ejs      // Page 3: Final ZIP download
+│   └── /public
+│       └── css
+│           └── styles.css
+└── /uploads                  // Generated uploads & revised ZIPs (created on runtime)
 
 ---
 
@@ -51,13 +67,11 @@ This repository demonstrates a Node.js application that allows users to:
 ## Access the application: Open http://localhost:3000 in your browser.
 
 1. Running Locally (Without Docker)
-Install dependencies:
+   Install dependencies and Start the server:
    ```bash
-   npm install
-   Start the server:
-
-   ```bash
-   npm start
+         npm install
+         npm start
+      
 Open your browser to http://localhost:3000.
 
 ## How to Use
