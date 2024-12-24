@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scan Results</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+      .file-section {
+        border: 1px solid #ccc;
+        margin-bottom: 1rem;
+        padding: 1rem;
+      }
+      .issue {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: #f9f9f9;
+      }
+      pre {
+        background: #eee;
+        padding: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>2. Review OWASP Issues and Possible Fixes</h1>
+    <form action="/finalize/<%= scanId %>" method="POST">
+      <% scanResults.forEach(function(fileResult, fileIndex) { %>
+        <div class="file-section">
+          <h2>File: <%= fileResult.filePath %></h2>
+          <pre><%= fileResult.originalCode %></pre>
+
+          <% if (fileResult.issues && fileResult.issues.length > 0) { %>
+            <% fileResult.issues.forEach(function(issue, issueIndex) { %>
+              <div class="issue">
+                <p><strong>Issue:</strong> <%= issue.issueDescription %></p>
+                <p><strong>Suggested Fix:</strong></p>
+                <pre><%= issue.suggestedFix %></pre>
+                <label>
+                  <input type="checkbox" name="file<%= fileIndex %>_issue<%= issueIndex %>" value="include" />
+                  Include this fix
+                </label>
+              </div>
+            <% }) %>
+          <% } else { %>
+            <p>No issues found in this file.</p>
+          <% } %>
+        </div>
+      <% }) %>
+
+      <button type="submit">Submit Revisions</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Download Revised Code</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <h1>3. Download Your Revised Code</h1>
+    <p>Your code has been revised based on your selections.</p>
+    <a href="/download/<%= newZipPath %>">Download the ZIP</a>
+  </body>
+</html>
