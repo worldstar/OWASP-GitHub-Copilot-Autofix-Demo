@@ -46,13 +46,14 @@ This repository demonstrates a Node.js application that allows users to:
    ```bash
    docker run -p 3000:3000 owasp-copilot-autofix-demo
 
-## Access the application: Open http://localhost:3000 in your browser.
+Access the application: Open http://localhost:3000 in your browser.
 
-1. Running Locally (Without Docker)
-   Install dependencies and Start the server:
+## Running Locally (Without Docker)
+
+1. Install dependencies and Start the server:      
    ```bash
-         npm install
-         npm start
+   npm install
+   npm start
       
 Open your browser to http://localhost:3000.
 
