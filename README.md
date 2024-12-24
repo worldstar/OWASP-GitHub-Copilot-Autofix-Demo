@@ -54,7 +54,6 @@ Access the application: Open http://localhost:3000 in your browser.
    ```bash
    npm install
    npm start
-      
 Open your browser to http://localhost:3000.
 
 ## How to Use
