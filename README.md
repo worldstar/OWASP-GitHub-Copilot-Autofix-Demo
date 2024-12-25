@@ -53,8 +53,8 @@ This repository demonstrates a Node.js application that allows users to:
 
 1. **Clone this repository**:
    ```bash
-   git clone https://github.com/your-username/owasp-copilot-autofix-demo.git
-   cd owasp-copilot-autofix-demo
+   git clone https://github.com/worldstar/OWASP-GitHub-Copilot-Autofix-Demo.git
+   cd OWASP-GitHub-Copilot-Autofix-Demo
 
 2. **Build the Docker image**:
    ```bash
